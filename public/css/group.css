@@ -1,0 +1,279 @@
+/* :root{
+    --main-color : #5B646B;
+    --bg-element : #2C2D31;
+    --font-weight : 100;
+    --font-text : 'Nanum Gothic', sans-serif;
+}
+
+*{margin: 0;}
+html,body{height: 100%;}
+body{
+    background-color: var(--main-color);
+} */
+:root {
+    --button-color: #41424e;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+}
+
+.title-font {
+    color: white;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+}
+
+/* header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    color: white;
+    flex: 0.5;
+    font-family: var(--font-text);
+    margin-left: 2rem;
+    font-weight: var(--font-weight);
+}
+header h3{
+    flex: 0.5;
+    text-align: end;
+    margin-right: 1rem;
+    color: white;
+    font-weight: var(--font-weight);
+    font-family: var(--font-text);
+} */
+
+/* formulaire création de groupe */
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .reunion {
+    background-color: var(--bg-element);
+    height: auto;
+    border-radius: 80px 0 80px 0;
+    width: 85%;
+    padding-bottom: 40px;
+}
+
+.reunion h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#container .reunion form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#container form .information .input_group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+input {
+    margin-top: .5rem;
+    width: 75%;
+    font-size: x-large;
+    padding: .5rem;
+}
+
+.ajouter {
+    color: var(--bg-element);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    padding-bottom: 20px;
+}
+
+.people-list {
+    margin-top: 2rem;
+    margin-left: 15%;
+    color: white;
+}
+
+
+.add_member {
+    background-color: white;
+    overflow-y: scroll;
+    max-height: 40vh;
+    width: 75%;
+}
+
+.add_member .member {
+    background-color: var(--button-color);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--bg-element) 1px solid;
+    display: flex;
+    align-items: center;
+    padding-inline: 2em;
+}
+
+.add_member h3 {
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.add_member p {
+    background-color: #383A41;
+    border-bottom: white 1px solid;
+    color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.ajouter .submit {
+    cursor: pointer;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+    margin-top: 2rem;
+    width: 75%;
+}
+
+.reunion a {
+    display: none;
+}
+
+.title-font {
+    color: white;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+}
+
+@media screen and (min-width: 860px) {
+    /* header {
+        height: 15%;
+        display: flex;
+        align-items: center;
+    }
+
+    header h1 {
+        color: white;
+        flex: 0.5;
+        font-family: var(--font-text);
+        margin-left: 2rem;
+        font-weight: var(--font-weight);
+        cursor: pointer;
+    }
+
+    header h3 {
+        flex: 0.5;
+        text-align: end;
+        margin-right: 5rem;
+        color: white;
+        font-weight: var(--font-weight);
+        font-family: var(--font-text);
+    } */
+
+    /* formulaire création de groupe */
+
+
+    #container .reunion {
+        background-color: var(--bg-element);
+        width: 65%;
+        max-width: 1200px;
+    }
+
+    #container .reunion form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .reunion h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #container form .information .input_group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+    }
+
+    input {
+        margin-top: .5rem;
+        width: 75%;
+        font-size: x-large;
+        padding: .5rem;
+    }
+
+    .information {
+        flex: 0.6;
+    }
+
+    .ajouter {
+        flex: 0.4;
+        margin-top: 0;
+        padding-right: 4em;
+    }
+
+    .people-list {
+        margin-top: 2rem;
+        margin-left: 15%;
+        color: white;
+    }
+
+    .people-list p {
+        margin-top: 1rem;
+        width: 75%;
+    }
+
+    .add_member {
+        background-color: var(--);
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .add_member h3 {
+        font-family: var(--font-text);
+        font-weight: var(--font-weight);
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .add_member p {
+        background-color: #383A41;
+        border-bottom: white 1px solid;
+        color: white;
+        text-align: center;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        cursor: pointer;
+    }
+
+    .ajouter .submit {
+        width: 100%;
+        cursor: pointer;
+        font-family: var(--font-text);
+        font-weight: var(--font-weight);
+        margin-top: 2rem;
+        margin-bottom: 50px;
+    }
+
+    .reunion a {
+        margin-left: 2rem;
+        font-size: large;
+        text-decoration: none;
+        font-family: var(--font-text);
+        font-weight: var(--font-weight);
+        color: white;
+    }
+}

@@ -1,0 +1,120 @@
+/* :root{
+    --main-color : #5B646B;
+    --bg-element : #2C2D31;
+    --font-weight : 100;
+    --font-text : 'Nanum Gothic', sans-serif;
+} */
+
+/* *{margin: 0;}
+html,body{height: 100%;}
+body{
+    background-color: var(--main-color);
+} */
+.title-font{
+    color: white;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight);
+}
+/* header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    color: white;
+    flex: 0.5;
+    font-family: var(--font-text);
+    margin-left: 2rem;
+    font-weight: var(--font-weight);
+    cursor: pointer;
+}
+header h3{
+    flex: 0.5;
+    text-align: end;
+    margin-right: 5rem;
+    color: white;
+    font-weight: var(--font-weight);
+    font-family: var(--font-text);
+} */
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+}
+.img-add{
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circle{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10rem;
+    margin-inline: 20px;
+}
+.img-add h3{
+    background-color: #D9D9D9;
+    padding: .5rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.information{
+    line-height: 1rem;
+    flex: 0.7;
+    margin-left: 2em;
+}
+.flex-pres{
+    display: flex;
+    align-items: center;
+}
+.flex-pres p{
+    margin-left: 1rem;
+}
+.unflex-pres{
+    line-height: 2rem;
+}
+.unflex-pres p {
+    width: 50%;
+}
+
+@media screen and (min-width: 480px){
+    #container{
+        flex-direction: row;
+    }
+
+    .information {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 860px){
+    .information{
+        flex: .5;
+    }
+
+    .img-add{
+        flex: .5;
+    }
+
+    .img-add .circle, .img-add .title-font{
+        margin-left: auto;
+        margin-right: 50px;
+    }
+
+    .img-add .title-font {
+        margin-right: 70px;
+    }
+
+    .img-add .circle {
+        margin-top: 22px;
+    }
+
+}

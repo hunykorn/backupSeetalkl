@@ -1,0 +1,557 @@
+:root {
+  --button-color: #41424e;
+  --main-color: #5b646b;
+  --bg-element: #515a61;
+  --font-weight: 100;
+  --font-text: "Nanum Gothic", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-text);
+  font-weight: var(--font-weight);
+}
+
+.container {
+  background-color: var(--main-color);
+  color: rgb(216, 216, 216);
+  padding-top: 100px;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+header {
+  height: 60px;
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(91, 100, 107, 0.85);
+  /* overflow: auto; Scroll bar fix */
+}
+
+header .mobile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+header .logo{
+  width: 10%;
+  height: 100%;
+  margin-right: 2rem;
+}
+header .logo img {
+  height: 100%;
+  user-select: none;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 3em;
+}
+
+header img.menu-button {
+  display: block;
+  transition: all 0.5s ease;
+  user-select: none;
+  cursor:pointer;
+}
+
+header img.menu-button.active {
+  transform: rotate(90deg);
+}
+
+header .menu {
+  max-height: 0;
+  margin-inline: auto;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  transition: max-height 0.5s ease-out;
+}
+
+header .menu.active {
+  max-height: 800px;
+
+  transition: max-height 1s ease-in-out;
+}
+
+header .menu a {
+  text-decoration: none;
+  color: rgb(216, 216, 216);
+  font-size: 1.7em;
+  text-align: center;
+  border-style: transparent;
+  padding: 5px;
+  display: block;
+  opacity: 0;
+  padding-inline: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+header .menu.active a {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+header .menu a.active {
+  background-color: var(--button-color);
+}
+
+header .menu a:hover {
+  background-color: var(--button-color);
+}
+
+footer {
+  height: 200px;
+  background-color: var(--bg-element);
+}
+
+footer h2 {
+  margin: 0;
+}
+
+.grid-accueil {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.grid-accueil .img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background-color: var(--button-color);
+  margin-top: 50px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.grid-accueil .text {
+  padding-inline: 20px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+form#connexion {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-element);
+  height: fit-content;
+  padding-bottom: 20vh;
+  margin-top: 50px;
+}
+
+form#connexion.inscription {
+  margin-bottom: 100px;
+}
+
+form .title {
+  grid-column: 2 / 3;
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+form .label-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+}
+
+textarea {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+form#connexion .col-form .col {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+form label,
+form input {
+  font-size: 1.1em;
+}
+
+form label {
+  padding-bottom: 5px;
+}
+
+input {
+  font-size: x-large;
+  padding: 0.5rem;
+}
+
+form .submit-button {
+  padding-inline: 53px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: fit-content;
+  margin-inline: auto;
+  margin-top: 30px;
+  background-color: var(--button-color);
+  color: rgb(216, 216, 216);
+  border: transparent;
+  border-radius: 12px;
+}
+
+form .submit-button:hover {
+  box-shadow: rgb(22, 22, 22) 2px 2px 2px;
+}
+
+form#reunions{
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+form .submit-button-reunion {
+  padding-inline: 53px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: fit-content;
+  background-color: rgba(91, 100, 107, 0.85);
+  color: rgb(216, 216, 216);
+  border: transparent;
+  border-radius: 12px;
+}
+
+form .submit-button-reunion:hover {
+  box-shadow: rgb(22, 22, 22) 2px 2px 2px;
+}
+
+
+.list-reunions {
+  background-color: var(--bg-element);
+  color: #26272b;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.list-reunions .creer-reunion {
+  background-color: rgb(221, 221, 221);
+  width: fit-content;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  margin-block: 20px;
+}
+
+.list-reunions .inner {
+  background-color: rgb(221, 221, 221);
+  height: fit-content;
+  padding-block: 20px;
+  width: 100%;
+}
+
+.list-reunions .inner h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.list-reunions .inner .reunion {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+}
+
+.reunion {
+  margin: 15px 15px 0 15px;
+}
+
+.reunion .row {
+  display: flex;
+  margin: 8px;
+}
+
+.reunion h3 {
+  margin: 0;
+  margin-right: auto;
+}
+
+.reunion .objet {
+  margin-inline: 20px;
+  margin-bottom: 20px;
+}
+
+.utilisateurs-container {
+  width: 100vw;
+  overflow: auto;
+  height: 70vh;
+}
+
+div.ajouter-user{
+  margin-top: 50px;
+}
+
+a.ajouter-user{
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+}
+
+a.ajouter-user img{
+  background-color: rgb(223, 223, 233);
+  border-radius: 100%;
+}
+
+table.utilisateurs {
+  display: block;
+  border: none;
+  width: max-content;
+  height: 100%;
+  color: var(--main-color);
+  background-color: rgb(223, 223, 223);
+}
+
+table.utilisateurs thead {
+  background-color: var(--bg-element);
+  color: rgb(216, 216, 216);
+}
+
+table.utilisateurs tbody {
+  background-color: rgb(240, 240, 240);
+}
+
+table.utilisateurs th,
+table.utilisateurs td {
+  padding: 1em;
+}
+
+table.utilisateurs .end {
+  background-color: var(--bg-element);
+  color: rgb(216, 216, 216);
+}
+
+.plus {
+  color: var(--button-color);
+  background-color: white;
+  border-radius: 50%;
+  height: fit-content;
+  width: 17px;
+  text-align: center;
+  margin-left: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.link-button {
+  text-decoration: none;
+  padding-inline: 53px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: fit-content;
+  background-color: rgba(91, 100, 107, 0.85);
+  color: rgb(216, 216, 216);
+  border: transparent;
+  border-radius: 12px;
+}
+
+.link-button:hover{
+  box-shadow: rgb(22, 22, 22) 2px 2px 2px;
+
+}
+
+div.reunion h3{
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  form#connexion {
+    height: fit-content;
+    border: transparent;
+    border-radius: 80px 0 80px 0;
+    padding-bottom: 70px;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .list-reunions {
+    padding-inline: 6%;
+  }
+
+  table.utilisateurs {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  /* header .menu {
+        max-height: 500px;
+        display: flex;
+        margin-inline: 0;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    header .menu a {
+        display: inline-block;
+        opacity: 1;
+        margin-block: 20px;
+        font-size: 2vw;
+        padding-inline: .6vw;
+    } */
+
+  header .menu {
+    width: 500px;
+    background-color: rgba(91, 100, 107, 0.85);
+    border-bottom-right-radius: 20px;
+  }
+
+  header .menu a {
+    text-align: left;
+    padding-right: 100px;
+  }
+
+  /* .container {
+        display: grid;
+        grid-template: auto 1fr 150px / 100%;
+        min-height: 100vh;
+    } */
+
+  .grid-accueil {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .grid-accueil .img {
+    max-width: none;
+  }
+
+  .grid-accueil .text {
+    align-self: center;
+  }
+
+  .grid-accueil .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+  }
+
+  .grid-accueil .row.reverse {
+    direction: rtl;
+  }
+
+  header {
+    grid-column: 1/4;
+  }
+
+  header h1 {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  form#connexion {
+    max-width: 600px;
+    margin-top: 80px;
+    padding-inline: 50px;
+  }
+
+  form#connexion .col-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .list-reunions {
+    width: 800px;
+    grid-column: 2/3;
+    margin-inline: auto;
+    padding: 30px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    border-radius: 80px 0 80px 0;
+
+  }
+
+  .list-reunions .creer-reunion {
+    font-size: 1.5em;
+    margin-left: 20px;
+    height: min-content;
+    align-self: end;
+    margin-bottom: 25px;
+  }
+
+  .list-reunions .inner {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 52px 0 52px 0;
+    padding-bottom: 50px;
+  }
+
+  .list-reunions .scroll {
+    height: 500px;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-bottom: 40px;
+  }
+}
+
+.cadre_groupe {
+  background-color: #1f1f23;
+  display: inline-block;
+  width: 100vw;
+}
+
+.webRTC {
+  display: block;
+  float: left;
+  width: 100vw;
+  height: 50vw;
+}
+
+.webRTC img {
+  width: 100%;
+  height: 100%;
+}
+
+.titre_message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_message {
+  padding-left: 5px;
+}
+
+.message {
+  width: 100vw;
+}
+
+.static_message {
+  border: 1px solid white;
+  background-color: #3b3b44;
+  width: 100vw;
+  padding: 2px 2px 2px 3px;
+  border-radius: 3px;
+}
+
+.send_message {
+  border: 1px solid #3b3b44;
+  background-color: white;
+  color: #3b3b44;
+}
+
+/*SI taille écran >= 921px FAIRE:*/
+@media screen and (min-width: 920px) {
+  .videocall {
+    display: flex;
+  }
+
+  .webRTC {
+    width: 70vw;
+  }
+}

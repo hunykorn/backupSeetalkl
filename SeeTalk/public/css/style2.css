@@ -1,0 +1,93 @@
+/* :root{
+    --main-color : #5B646B;
+    --bg-element : #2C2D31;
+    --font-text : 'Nanum Gothic', sans-serif;
+}
+*{
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body
+{
+    height: 100%;
+    background-color: var(--main-color);
+}
+header{
+    color: white;
+    display: flex;
+    height: 15%;
+} */
+.connexion{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0.5;
+}
+/* a{
+    font-family: var(--font-text);
+    text-decoration: none;
+    color: white;
+    margin-right: 2rem;
+    background-color: var(--bg-element);
+    padding: .7rem;
+    border-radius: .5rem;
+}
+a:hover{
+    color: orange;
+    transition: .25s;
+} */
+.title{
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.title h1{
+    margin-left: 5rem;
+}
+
+/* actualité page acceuil  */
+.container2{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.actu{
+    display: flex;
+    height: 50%;
+}
+.actu-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+    color: white;
+}
+.actu-info p{
+    text-align: center;
+    width: 75%;
+    animation: go .25s linear backwards;
+}
+.actu-img{
+    flex: 0.5;
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.actu-img img{
+    width: 100%;
+    object-fit: contain;
+    animation: go .25s linear backwards;
+}
+
+@keyframes go {
+    from{
+        margin-top: 100%;
+    }to{
+        margin-top: 0%;
+    }
+}
